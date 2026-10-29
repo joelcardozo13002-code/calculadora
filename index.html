@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Calculadora ET403 con conversor de unidades."
+    />
+    <title>Calculadora ET403 · Semana 9</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="app.js" defer></script>
+  </head>
+  <body>
+    <main class="contenedor">
+      <header class="encabezado">
+        <p class="etiqueta">ET403 · Técnicas de la Programación</p>
+        <h1>Calculadora y conversor de unidades</h1>
+        <p class="introduccion">
+          Conserva las operaciones de la semana 7 e incorpora conversiones de
+          longitud y masa.
+        </p>
+      </header>
+
+      <section class="panel" aria-labelledby="titulo-calculadora">
+        <h2 id="titulo-calculadora">1. Calculadora original</h2>
+        <p class="ayuda">
+          Operaciones disponibles en el archivo recibido: suma y división.
+        </p>
+
+        <div class="campo">
+          <label for="a">Primer dato</label>
+          <input
+            id="a"
+            type="text"
+            inputmode="decimal"
+            value="12"
+            autocomplete="off"
+            placeholder="Ej. 12"
+          />
+        </div>
+        <div class="campo">
+          <label for="b">Segundo dato</label>
+          <input
+            id="b"
+            type="text"
+            inputmode="decimal"
+            value="3"
+            autocomplete="off"
+            placeholder="Ej. 3"
+          />
+        </div>
+        <div class="campo">
+          <label for="operacion">Operación</label>
+          <select id="operacion">
+            <option value="sumar">Sumar</option>
+            <option value="dividir">Dividir</option>
+          </select>
+        </div>
+        <button id="calcular" type="button">Calcular</button>
+        <p id="resultado" class="resultado" role="status" aria-live="polite">
+          Pulse «Calcular» para probar.
+        </p>
+      </section>
+
+      <section class="panel" aria-labelledby="titulo-conversor">
+        <h2 id="titulo-conversor">2. Conversor de unidades</h2>
+        <p class="ayuda">
+          Introduzca un número igual o mayor que cero y seleccione la
+          conversión.
+        </p>
+
+        <div class="campo">
+          <label for="valorConversion">Valor que desea convertir</label>
+          <input
+            id="valorConversion"
+            type="text"
+            inputmode="decimal"
+            autocomplete="off"
+            placeholder="Ej. 1.5"
+          />
+        </div>
+        <div class="campo">
+          <label for="tipoConversion">Tipo de conversión</label>
+          <select id="tipoConversion">
+            <option value="m-cm">Metros a centímetros (m → cm)</option>
+            <option value="cm-m">Centímetros a metros (cm → m)</option>
+            <option value="kg-g">Kilogramos a gramos (kg → g)</option>
+            <option value="g-kg">Gramos a kilogramos (g → kg)</option>
+          </select>
+        </div>
+        <button id="convertir" type="button">Convertir</button>
+        <p
+          id="resultadoConversion"
+          class="resultado"
+          role="status"
+          aria-live="polite"
+        >
+          El resultado aparecerá aquí.
+        </p>
+      </section>
+
+      <footer>
+        <p>Proyecto académico · ET403 · Semana 9</p>
+      </footer>
+    </main>
+  </body>
+</html>
